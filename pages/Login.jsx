@@ -65,8 +65,9 @@ const result= await signInWithPopup(auth,googleAuth)
       <Image
       src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" 
       alt="google logo"
-      width={20}
-      height={20}
+      width={40}
+      height={40}
+      className='bg-white p-1'
     />
 
          {/* <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" className='w-5 h-5' alt="" /> */}
