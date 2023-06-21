@@ -36,6 +36,14 @@ const Product = () => {
 
 //save in firebase
   const handleSave = () => {
+
+    if (selectedProducts.length === 0) {
+      // Show a message indicating that no products are selected
+      toast.warning('No products selected!', {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return; // Exit the function without saving
+    }
     // Save selectedProducts to firebase database
     const url = 'https://my-intership-11782-default-rtdb.firebaseio.com/users.json';
   
