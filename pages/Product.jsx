@@ -4,9 +4,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AppContext } from "../usecontext/usecontext";
 import Cookies from 'js-cookie';
 import Image from 'next/image'
+import { useRouter } from 'next/router';
+
  
 
 const Product = () => {
+
+  const router = useRouter();
+
   //api data 
   const apiData = useContext(AppContext);
  const [selectedProducts, setSelectedProducts] = useState([]);
@@ -67,12 +72,14 @@ const Product = () => {
       });
   };
     const handleLogout = () => {
+
       // Clear the login cookies
       Cookies.remove('isLoggedIn');
       Cookies.remove('userData');
   
       // Redirect to the login page 
-      window.location.href = '/Login';
+  router.push('/Login');
+
     };
   
 
